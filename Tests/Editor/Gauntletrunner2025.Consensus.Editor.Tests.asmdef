@@ -1,0 +1,14 @@
+{
+    "name": "Gauntletrunner2025.Consensus.Editor.Tests",
+    "references": [
+        "Gauntletrunner2025.Consensus.Editor",
+        "Gauntletrunner2025.Consensus"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}

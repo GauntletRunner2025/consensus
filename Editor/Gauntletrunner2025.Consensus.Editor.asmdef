@@ -1,0 +1,10 @@
+{
+    "name": "Gauntletrunner2025.Consensus.Editor",
+    "references": [
+      "Gauntletrunner2025.Consensus"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}

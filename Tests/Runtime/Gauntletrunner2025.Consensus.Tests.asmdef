@@ -1,0 +1,11 @@
+{
+    "name": "Gauntletrunner2025.Consensus.Tests",
+    "references": [
+        "Gauntletrunner2025.Consensus"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": []
+}
