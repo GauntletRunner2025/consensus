@@ -21,7 +21,6 @@ public abstract partial class ConsensusSystem : SystemBase
     {
         SetupQuery(EntityManager);
 
-        //Same as above but done via the EntityQueryDesc
         var entityQueryDesc = new EntityQueryDesc
         {
             All = new ComponentType[] { SystemFlag, typeof(ConsensusBlocker) },
@@ -29,7 +28,7 @@ public abstract partial class ConsensusSystem : SystemBase
         };
         EntitiesWithSystemFlagAndBlockerBuffer = EntityManager.CreateEntityQuery(entityQueryDesc);
 
-        Debug.Log($"[{this.GetType().Name}] Created Consensus Interest component");
+        // Debug.Log($"[{this.GetType().Name}] Created Consensus Interest component");
         var e = EntityManager.CreateEntity();
         EntityManager.AddComponentData(e, new ConsensusInterest
         {
@@ -62,7 +61,7 @@ public abstract partial class ConsensusSystem : SystemBase
 
             EntityManager.RemoveComponent(entity, SystemFlag);
 
-            Debug.Log($"Removed {SystemFlag} from {entity}");
+            // Debug.Log($"Removed {SystemFlag} from {entity}");
 
             //Get the dynamic buffer of blockers
             var item = EntityManager.GetBuffer<ConsensusBlocker>(entity);
@@ -72,7 +71,7 @@ public abstract partial class ConsensusSystem : SystemBase
             {
                 if (item[i].Value == SystemFlag)
                 {
-                    Debug.Log($"Removed {SystemFlag} from blockers on {entity}");
+                    // Debug.Log($"Removed {SystemFlag} from blockers on {entity}");
                     item.RemoveAt(i);
                     break;
                 }
